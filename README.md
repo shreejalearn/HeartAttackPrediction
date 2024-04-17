@@ -11,3 +11,6 @@ Deployed:
 https://heartmate.streamlit.app/
 
 This version however isn't perfect and fully ready yet, there are some small bugs that need to be fixed.
+
+Further Information:
+https://medium.com/@shreeja.das.16/building-a-ml-model-using-a-heart-disease-dataset-bb4925dc43b2
