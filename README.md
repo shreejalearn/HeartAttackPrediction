@@ -6,3 +6,7 @@ To run the program:
 
 streamlit run Hello.py
 (File can be found in .venv and under Scripts)
+
+Deployed:
+https://heartmate.streamlit.app/
+This version however isn't perfect and fully ready yet, there are some small bugs that need to be fixed.
