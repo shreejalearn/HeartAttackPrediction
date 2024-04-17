@@ -6,3 +6,4 @@ plotly
 path
 joblib
 scikit-learn
+sydney-py

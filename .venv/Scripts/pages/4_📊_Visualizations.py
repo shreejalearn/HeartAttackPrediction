@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import path
+
+import sys
 
 st.set_page_config(
     page_title="Doc Assist",
@@ -10,7 +13,15 @@ st.set_page_config(
 
 st.markdown("# Taking A Closer Look")
 
-heart = pd.read_csv('C:/Users/shree/Documents/Disease/heart_1.csv')
+dir = path.Path(__file__).absolute().parent
+
+# Adding the parent directory to sys.path
+sys.path.append(dir)
+# Constructing the path to the CSV file
+path_to_df= dir.parent / 'heart_1.csv'
+
+# Load the existing DataFrame
+heart = pd.read_csv(path_to_df)
 
 # Column name replacements
 replace = {

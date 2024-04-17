@@ -4,7 +4,9 @@ import joblib
 
 import numpy as np
 from sklearn.preprocessing import RobustScaler
+import path
 
+import sys
 
 # User Interface
 st.markdown("# Heart Attack Risk Score (Predict)")
@@ -77,8 +79,16 @@ user_input = pd.DataFrame({
 
 # Button to trigger prediction
 if st.button("Predict"):
+
+    dir = path.Path(__file__).absolute().parent
+
+    # Adding the parent directory to sys.path
+    sys.path.append(dir)
+    # Constructing the path to the CSV file
+    path_to_model = dir.parent / 'heart_attack_model.joblib'
+
     # Load the trained model
-    model = joblib.load('C:/Users/shree/Documents/Disease/heart_attack_model.joblib')
+    model = joblib.load(path_to_model)
 
     # Sample data for prediction
 

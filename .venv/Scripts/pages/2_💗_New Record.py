@@ -1,8 +1,18 @@
 import streamlit as st
 import pandas as pd
+import path
+import sys
+
+
+dir = path.Path(__file__).absolute().parent
+
+# Adding the parent directory to sys.path
+sys.path.append(dir)
+# Constructing the path to the CSV file
+path_to_df= dir.parent / 'heart_1.csv'
 
 # Load the existing DataFrame
-heart = pd.read_csv('C:/Users/shree/Documents/Disease/heart_1.csv')
+heart = pd.read_csv(path_to_df)
 
 replace = {
     'age': 'Age',
