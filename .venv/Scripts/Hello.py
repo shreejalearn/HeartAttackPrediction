@@ -77,7 +77,7 @@ st.markdown(
 )
 
 # Read DataFrame
-heart = pd.read_csv('C:/Users/shree/Documents/Disease/heart_1.csv')
+heart = pd.read_csv('heart_1.csv')
 
 # Column name replacements
 replace = {
