@@ -124,6 +124,7 @@ target_counts_df = pd.DataFrame({'Heart Attack Status': target_counts.index, 'Co
 fig = px.bar(target_counts_df, x='Heart Attack Status', y='Count', 
              color_discrete_sequence=px.colors.qualitative.Set3)
 fig.update_layout(xaxis_title="Heart Attack Status", yaxis_title="Count", title_x=0.5, font_size=16, showlegend=False)
+fig.update_layout(xaxis_title_text='Heart Attack Status')
 st.plotly_chart(fig, use_container_width=True)
 
 # Histograms
