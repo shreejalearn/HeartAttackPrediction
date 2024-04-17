@@ -6,6 +6,8 @@ import plotly.figure_factory as ff
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+import sys
+import path
 
 # Set page configuration
 st.set_page_config(
@@ -76,8 +78,15 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Read DataFrame
-heart = pd.read_csv('heart_1.csv')
+dir = path.Path(__file__).absolute().parent
+
+# Adding the parent directory to sys.path
+sys.path.append(dir)
+# Constructing the path to the CSV file
+path_to_df = dir / 'heart_1.csv'
+
+# Reading the CSV file with pandas
+heart = pd.read_csv(path_to_df)
 
 # Column name replacements
 replace = {
