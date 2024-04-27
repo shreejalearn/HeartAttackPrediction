@@ -14,3 +14,5 @@ This version however isn't perfect and fully ready yet, there are some small bug
 
 Further Information:
 https://medium.com/@shreeja.das.16/building-a-ml-model-using-a-heart-disease-dataset-bb4925dc43b2
+
+Presentation slides to selected panalists (Sunday, April 28th, 2024): https://docs.google.com/presentation/d/1L50qTPQX_TziXNQ_jIKOH4l8mEYqEotS6mEITdEgFwY/edit?usp=sharing
